@@ -22,12 +22,12 @@
   --bs-teal: #1abc9c;
   --bs-cyan: #0dcaf0;
   /*Colores nuestros*/
-  --bs-golden: #cac3ad; /*rgb: 202, 195, 173*/
-  --bs-golden-rgb: 202, 195, 173;
-  --bs-dark-golden: #888270; /*rgb: 109, 103, 85*/
-  --bs-dark-golden-rgb: 109, 103, 85;
-  --bs-darkest-golden: #37342b; /*rgb: 55, 52, 43*/
-  --bs-darkest-golden-rgb: 55, 52, 43;
+  --bs-golden: #A9DAF5; /*rgb: 202, 195, 173*/
+  --bs-golden-rgb: 202, 154, 217;
+  --bs-dark-golden: #5DAED4; /*rgb: 109, 103, 85*/
+  --bs-dark-golden-rgb: 176, 103, 197;
+  --bs-darkest-golden: #ffff; /*rgb: 55, 52, 43*/
+  --bs-darkest-golden-rgb: 0, 0, 0;
   /*----------------*/
   --bs-black: #000;
   --bs-white: #fff;
@@ -50,8 +50,8 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 26, 188, 156; /*color del fondo de imagen de arriba y contact me*/
-  --bs-secondary-rgb: 202, 195, 173; /*color de barra de arriba, también color de palabra de PORTFOLIO Y CONTACTO*/
+  --bs-primary-rgb: 169, 218, 245; /*color del fondo de imagen de arriba y contact me*/
+  --bs-secondary-rgb: 169, 218, 245; /*color de barra de arriba, también color de palabra de PORTFOLIO Y CONTACTO*/
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -62,8 +62,8 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace:"Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -81,10 +81,10 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #151e1c; /*color link de abajo en contacto*/
-  --bs-link-hover-color: var(--bs-dark-golden); /*color del mismo link cuando se pasa ratón por encima*/
+  --bs-link-color: #00719C; /*color link de abajo en contacto*/
+  --bs-link-hover-color: #84d6f1; /*color del mismo link cuando se pasa ratón por encima*/
   --bs-code-color: #d63384;
-  --bs-highlight-bg: #fff3cd;
+  --bs-highlight-bg: #b067c5;
 }
 
 *,
@@ -3120,7 +3120,7 @@ textarea.form-control-lg {
   --bs-btn-color: #f8f9fa;
   --bs-btn-border-color: #f8f9fa;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #888270;
+  --bs-btn-hover-bg: var(--bs-dark-golden);
   --bs-btn-hover-border-color: #f8f9fa;
   --bs-btn-focus-shadow-rgb: 248, 249, 250;
   --bs-btn-active-color: #fff;
@@ -8167,7 +8167,7 @@ textarea.form-control-lg {
 /*Cambia MENU, fondo imagen principal y ABOUT*/
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(136, 130, 112, var(--bs-bg-opacity)) !important;
+  background-color: rgba(61, 168, 204, var(--bs-bg-opacity)) !important;
 }
 
 .bg-secondary {
@@ -10987,7 +10987,7 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: var(--bs-darkest-golden); /*color de la zona en la que estamos al pasar el ratón por encima*/
+    background: #082B3D; /*color de la zona en la que estamos al pasar el ratón por encima*/
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -11021,7 +11021,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/portfolio/SplashArt.png"); /*Poner la imagen del splash art*/
+  background: linear-gradient(rgba(105, 160, 184, 0.5), rgba(105, 160, 184, 0.5)); /*Poner la imagen del splash art*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
