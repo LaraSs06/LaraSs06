@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Profesional | 3D, Animación y Videojuegos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#131c2e',
+                        accentPrimary: '#6366f1',
+                        accentSecondary: '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+        }
+        .glass-card {
+            background: rgba(19, 28, 46, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans min-h-screen selection:bg-accentPrimary selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentPrimary to-accentSecondary flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <i class="fa-solid fa-cube text-white text-lg"></i>
+                </div>
+                <span class="font-bold text-xl tracking-wide bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Portfolio 3D</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-indigo-400 transition-colors">Inicio</a>
+                <a href="#proyectos" class="hover:text-indigo-400 transition-colors">Proyectos</a>
+                <a href="#habilidades" class="hover:text-indigo-400 transition-colors">Especialidades</a>
+                <a href="#contacto" class="hover:text-indigo-400 transition-colors">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="pt-32 pb-20 md:pt-44 md:pb-32 hero-gradient relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
+                <!-- Texto de presentación -->
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                        <span>Modelado 3D • Animación • Desarrollo de Videojuegos</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6 text-white">
+                        ¡Hola! Soy <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Lara Sánchez Sanz</span>
+                    </h1>
+                    <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                        Tengo 22 años y estoy finalizando el grado en Diseño y Desarrollo de Videojuegos en la URJC. Me especializo principalmente en modelado 3D, especialmente modelado orgánico. Actualmente trabajo en un cortometraje de animación 3D como TFG y cuento con cuatro meses de experiencia en Kurai, donde realicé modelado 3D orientado a impresión 3D. Busco seguir creciendo como artista 3D y participar en nuevos proyectos que me permitan desarrollar mis habilidades.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#proyectos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold shadow-xl shadow-indigo-500/25 transition-all text-center">
+                            Explorar Proyectos
+                        </a>
+                        <a href="#tfg" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold transition-all text-center">
+                            Ver Mi TFG
+                        </a>
+                    </div>
+                </div>
+                <!-- Foto de perfil -->
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 blur-xl opacity-40 animate-pulse"></div>
+                    <div class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-indigo-500/40 glass-card">
+                        <img src="./Lara_Foto.jpg" alt="Lara Sánchez Sanz" class="w-full h-full object-cover object-[center_10%]" onerror="this.src='https://placehold.co/400x400/131c2e/6366f1?text=Lara+Sánchez'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuevo Apartado: TFG (Cortometraje de Animación 3D) -->
+    <section id="tfg" class="py-20 bg-slate-900/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30 uppercase tracking-wider mb-4 inline-block">Trabajo de Fin de Grado</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Cortometraje de Animación 3D</h2>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                    Proyecto colaborativo centrado en la creación de un cortometraje de animación 3D con estética cel-shading, desarrollado íntegramente en Blender. El proyecto abarca las diferentes fases de una producción de animación, desde el diseño y modelado hasta el rigging, la animación y el renderizado final.
+                </p>
+            </div>
+            
+            <div class="glass-card max-w-5xl mx-auto rounded-3xl overflow-hidden border border-purple-500/30 shadow-2xl shadow-purple-500/10">
+                <div class="p-6 md:p-10 flex flex-col items-center">
+                    <div class="w-full h-80 md:h-[500px] bg-slate-950 rounded-2xl overflow-hidden relative border border-slate-800 flex items-center justify-center">
+                        <div id="carousel-track-tfg" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./TFG/Foto_1.png" alt="Cortometraje TFG 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/1200x800/131c2e/8b5cf6?text=TFG+Preview+1'">
+                            <img src="./TFG/Foto_2.png" alt="Cortometraje TFG 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/1200x800/131c2e/8b5cf6?text=TFG+Preview+2'">
+                            <img src="./TFG/Foto_3.png" alt="Cortometraje TFG 3" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/1200x800/131c2e/8b5cf6?text=TFG+Preview+3'">
+                            <img src="./TFG/Foto_4.png" alt="Cortometraje TFG 4" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/1200x800/131c2e/8b5cf6?text=TFG+Preview+4'">
+                            <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                                <video src="./TFG/Video_1.mp4" controls class="w-full h-full object-contain"></video>
+                            </div>
+                        </div>
+                        <button onclick="prevSlide(event, 'carousel-track-tfg', 5)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button onclick="nextSlide(event, 'carousel-track-tfg', 5)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                        <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                            <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-purple-950/80 text-purple-300 border border-purple-500/30 backdrop-blur-md">En Desarrollo • TFG URJC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-20 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Galería de Proyectos</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2">
+                <button onclick="filterProjects('all')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-indigo-600 text-white transition-colors">Todos</button>
+                <button onclick="filterProjects('3d')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-900 text-slate-400 hover:text-white transition-colors">Modelado 3D</button>
+                <button onclick="filterProjects('videojuegos')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-900 text-slate-400 hover:text-white transition-colors">Videojuegos</button>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card Nuevo Proyecto: Práctica Modelado y Renderizado 3D -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-amber-500/40 transition-all duration-300" data-category="3d">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-practicass" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Universidad/Otros/Croissant.jpg" alt="Croissant, Donuts y Taza" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/f59e0b?text=Croissant+Render'">
+                        <img src="./Universidad/Otros/chica.png" alt="Personaje Chica 3D" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/f59e0b?text=Chica+3D'">
+                        <img src="./Universidad/Otros/chico.png" alt="Personaje Chico 3D" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/f59e0b?text=Chico+3D'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-practicass', 3)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-practicass', 3)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/25 text-amber-300 border border-amber-500/30 backdrop-blur-md">Modelado 3D</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">Prácticas de Modelado y Renderizado 3D</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Serie de trabajos desarrollados como práctica en modelado y renderizado 3D.</p>
+                    <button onclick='openModal("Prácticas de Modelado y Renderizado 3D", "Serie de trabajos desarrollados como práctica en modelado y renderizado 3D, incluyendo tanto bodegones detallados como la creación y estilización de personajes estilizados en 3D.", [
+                        "./Universidad/Otros/Croissant.jpg",
+                        "./Universidad/Otros/chica.png",
+                        "./Universidad/Otros/chico.png"
+                    ])' class="w-full py-2.5 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/30 text-amber-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Nuevo Proyecto: Escena 3D Completa y Personaje Animado -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-indigo-500/40 transition-all duration-300" data-category="3d">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-escena3d" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Universidad/Trabajo_Animación3D/unity.png" alt="Escena en Unity" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Unity+Escena'">
+                        <img src="./Universidad/Trabajo_Animación3D/escenario.png" alt="Escenario 3D" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Escenario+3D'">
+                        <img src="./Universidad/Trabajo_Animación3D/personaje.png" alt="Personaje Astronauta" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Personaje+Astronauta'">
+                        <img src="./Universidad/Trabajo_Animación3D/esqueleto.png" alt="Esqueleto y Rigging" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Rigging+Esqueleto'">
+                        <img src="./Universidad/Trabajo_Animación3D/cohete.png" alt="Cohete y Detalles" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Cohete+Escena'">
+                        <img src="./Universidad/Trabajo_Animación3D/Abeja.png" alt="Modelo Abeja" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Modelo+Abeja'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-escena3d', 6)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-escena3d', 6)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 backdrop-blur-md">Modelado 3D</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Escena 3D y Personaje Interactivo</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto académico centrado en la creación integral de una escena 3D completa, compuesta por un entorno modelado desde cero y un personaje animado...</p>
+                    <button onclick='openModal("Escena 3D y Personaje Interactivo", "Proyecto académico centrado en la creación integral de una escena 3D completa, compuesta por un entorno modelado desde cero y un personaje animado capaz de interactuar con él. El trabajo abarcó modelado, texturizado, rigging y animación, siguiendo un pipeline profesional.", [
+                        "./Universidad/Trabajo_Animación3D/unity.png",
+                        "./Universidad/Trabajo_Animación3D/escenario.png",
+                        "./Universidad/Trabajo_Animación3D/personaje.png",
+                        "./Universidad/Trabajo_Animación3D/esqueleto.png",
+                        "./Universidad/Trabajo_Animación3D/cohete.png",
+                        "./Universidad/Trabajo_Animación3D/Abeja.png"
+                    ])' class="w-full py-2.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Rock and Mole: Videojuego Académico -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-pink-500/40 transition-all duration-300" data-category="videojuegos">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-rockmole" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Universidad/Rock & Mole/SplashArt.png" alt="Rock and Mole Splash Art" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Splash+Art'">
+                        <img src="./Universidad/Rock & Mole/Ficha_Personaje_Topo.png" alt="Ficha Topo Otto" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Topo+Otto'">
+                        <img src="./Universidad/Rock & Mole/Ficha_Personaje_Conejo.png" alt="Ficha Conejo TNT" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Conejo+TNT'">
+                        <img src="./Universidad/Rock & Mole/Ficha_Personaje_Golem_Pequeño.png" alt="Ficha Golem" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Golem+Pequeño'">
+                        <img src="./Universidad/Rock & Mole/Ficha_Personaje_Planta.png" alt="Ficha Planta Carnívora" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Planta+Carnivora'">
+                        <!-- Videos añadidos al carrusel de Rock and Mole -->
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29 21-08-34 (1).mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29 23-19-15.mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29 23-20-34.mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29_21-00-25-Picsart-BackgroundRemover.mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29_21-06-56.mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/2025-11-29 23-13-08.mp4" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/Golem (1).mov" controls class="w-full h-full object-contain"></video>
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                            <video src="./Universidad/Rock & Mole/Plantita.mov" controls class="w-full h-full object-contain"></video>
+                        </div>
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-rockmole', 13)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-rockmole', 13)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-pink-500/25 text-pink-300 border border-pink-500/30 backdrop-blur-md">Videojuegos</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-pink-400 transition-colors">Rock and Mole</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto académico de cuatro meses centrado en la creación completa del videojuego Rock and Mole mediante un pipeline profesional.</p>
+                    <button onclick='openModal("Rock and Mole", "Proyecto académico de cuatro meses centrado en la creación completa del videojuego Rock and Mole mediante un pipeline profesional. El trabajo incluyó modelado 3D y animación de personajes y enemigos, desarrollando mallas optimizadas para gameplay, rigging funcional y ciclos de movimiento claros y expresivos, además de arte promocional y tráileres de gameplay.", [
+                        "./Universidad/Rock & Mole/SplashArt.png",
+                        "./Universidad/Rock & Mole/Ficha_Personaje_Topo.png",
+                        "./Universidad/Rock & Mole/Ficha_Personaje_Conejo.png",
+                        "./Universidad/Rock & Mole/Ficha_Personaje_Golem_Pequeño.png",
+                        "./Universidad/Rock & Mole/Ficha_Personaje_Planta.png",
+                        "./Universidad/Rock & Mole/2025-11-29 21-08-34 (1).mp4",
+                        "./Universidad/Rock & Mole/2025-11-29 23-19-15.mp4",
+                        "./Universidad/Rock & Mole/2025-11-29 23-20-34.mp4",
+                        "./Universidad/Rock & Mole/2025-11-29_21-00-25-Picsart-BackgroundRemover.mp4",
+                        "./Universidad/Rock & Mole/2025-11-29_21-06-56.mp4",
+                        "./Universidad/Rock & Mole/2025-11-29 23-13-08.mp4",
+                        "./Universidad/Rock & Mole/Golem (1).mov",
+                        "./Universidad/Rock & Mole/Plantita.mov"
+                    ], "https://realbananaslip.itch.io/rock-mole", true)' class="w-full py-2.5 rounded-xl bg-pink-600/20 hover:bg-pink-600/30 border border-pink-500/30 text-pink-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card The Pit: Videojuego Game Jam -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-pink-500/40 transition-all duration-300" data-category="videojuegos">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-thepit" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Universidad/GameJam_ThePit/thePit_foto.png" alt="The Pit Menú" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=The+Pit+Menu'">
+                        <img src="./Universidad/GameJam_ThePit/thePit_foto2.png" alt="The Pit Gameplay" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=The+Pit+Gameplay'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-thepit', 2)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-thepit', 2)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-pink-500/25 text-pink-300 border border-pink-500/30 backdrop-blur-md">Videojuegos</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-pink-400 transition-colors">The Pit (Game Jam)</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto realizado durante una game jam de un mes, basado en la temática “Te vas a caer”, un título de acción y esquiva descendente.</p>
+                    <button onclick='openModal("The Pit (Game Jam)", "Proyecto realizado durante una game jam de un mes, centrado en crear un videojuego completo basado en la temática “Te vas a caer”. El resultado fue un título de acción y esquiva, construido alrededor de un recorrido descendente con obstáculos que incrementan su dificultad de forma progresiva. El trabajo combinó diseño de mecánicas y programación básica de gameplay, incluyendo colisiones, comportamiento de obstáculos y control del personaje.", [
+                        "./Universidad/GameJam_ThePit/thePit_foto.png",
+                        "./Universidad/GameJam_ThePit/thePit_foto2.png"
+                    ], "https://acholito.itch.io/the-pit")' class="w-full py-2.5 rounded-xl bg-pink-600/20 hover:bg-pink-600/30 border border-pink-500/30 text-pink-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Haku: Nuevo Proyecto Dragón Haku -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-cyan-500/40 transition-all duration-300" data-category="3d">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-haku" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03.png" alt="Haku 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+1'">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03(2).png" alt="Haku 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+2'">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03(3).png" alt="Haku 3" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+3'">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04.png" alt="Haku 4" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+4'">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04(2).png" alt="Haku 5" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+5'">
+                        <img src="./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04(3).png" alt="Haku 6" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/06b6d4?text=Haku+Ghibli+6'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-haku', 6)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-haku', 6)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 backdrop-blur-md">Modelado 3D</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">Figura 3D Dragón Haku (Studio Ghibli)</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto de prácticas extracurriculares centrado en el modelado técnico de una figura 3D del dragón Haku, diseñada y optimizada para impresión 3D.</p>
+                    <button onclick='openModal("Figura 3D Dragón Haku (Studio Ghibli)", "Proyecto de prácticas extracurriculares centrado en el modelado técnico de una figura 3D del dragón Haku (Studio Ghibli), diseñada y optimizada para impresión 3D.", [
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03.png",
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03(2).png",
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_25_03(3).png",
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04.png",
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04(2).png",
+                        "./Prácticas_Externas/Proyecto_Dragon_Gibli/Actualización_13_04(3).png"
+                    ])' class="w-full py-2.5 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 border border-cyan-500/30 text-cyan-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 0: Modelado para impresión 3D de figuras -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-pink-500/40 transition-all duration-300" data-category="3d">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-nuevo" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Prácticas_Externas/Proyecto_Evangelion/Actualizaaón_21_05.png" alt="Última imagen 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Proyecto+Nuevo+1'">
+                        <img src="./Prácticas_Externas/Proyecto_Evangelion/Actualización_26_05.png" alt="Última imagen 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Proyecto+Nuevo+2'">
+                        <img src="./Prácticas_Externas/Proyecto_Evangelion/Actualización_28_05.png" alt="Última imagen 3" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/ec4899?text=Proyecto+Nuevo+3'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-nuevo', 3)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-nuevo', 3)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 backdrop-blur-md">Modelado 3D</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-pink-400 transition-colors">Modelado para Impresión 3D de Figuras</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto de prácticas extracurriculares centrado en el modelado 3D estilizado de varios personajes de la serie Evangelion, adaptados a un estilo chibi/Funko Pop.</p>
+                    <button onclick='openModal("Modelado para Impresión 3D de Figuras", "Proyecto de prácticas extracurriculares centrado en el modelado 3D estilizado de varios personajes de la serie Evangelion, adaptados a un estilo chibi/Funko Pop. El trabajo consistió en reinterpretar las siluetas y rasgos característicos de cada personaje, creando modelos compactos, proporciones exageradas y detalles simplificados propios del estilo. Los modelos se optimizaron para presentación visual y posibles aplicaciones en impresión o coleccionables.", [
+                        "./Prácticas_Externas/Proyecto_Evangelion/Actualizaaón_21_05.png",
+                        "./Prácticas_Externas/Proyecto_Evangelion/Actualización_26_05.png",
+                        "./Prácticas_Externas/Proyecto_Evangelion/Actualización_28_05.png"
+                    ])' class="w-full py-2.5 rounded-xl bg-pink-600/20 hover:bg-pink-600/30 border border-pink-500/30 text-pink-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card NUEVA: Modelado 3D Técnico para Impresión -->
+            <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-emerald-500/40 transition-all duration-300" data-category="3d">
+                <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                    <div id="carousel-track-tecnico" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_22_04(2).png" alt="Técnico 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+1'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_08_04(2).png" alt="Técnico 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+2'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_08_04.png" alt="Técnico 3" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+3'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_17_03(2).png" alt="Técnico 4" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+4'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_17_03.png" alt="Técnico 5" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+5'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_18_03(2).png" alt="Técnico 6" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+6'">
+                        <img src="./Prácticas_Externas/Proyectos_Tecnicos/Actualización_18_03.png" alt="Técnico 7" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/10b981?text=Modelado+Tecnico+7'">
+                    </div>
+                    <button onclick="prevSlide(event, 'carousel-track-tecnico', 7)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextSlide(event, 'carousel-track-tecnico', 7)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 backdrop-blur-md">Impresión 3D</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">Modelado 3D Técnico para Impresión</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Conjunto de proyectos desarrollados durante prácticas extracurriculares centrados en el modelado 3D técnico para impresión 3D.</p>
+                    <button onclick='openModal("Modelado 3D Técnico para Impresión", "Conjunto de proyectos desarrollados durante prácticas extracurriculares centrados en el modelado 3D técnico para impresión 3D.", [
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_22_04(2).png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_08_04(2).png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_08_04.png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_17_03(2).png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_17_03.png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_18_03(2).png",
+                        "./Prácticas_Externas/Proyectos_Tecnicos/Actualización_18_03.png"
+                    ])' class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 text-emerald-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Ampliar Proyecto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 1: Dioramas Temáticos -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-indigo-500/40 transition-all duration-300" data-category="3d">
+                    <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                        <div id="carousel-track-diorama" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualixación_29_06.png" alt="Diorama Ghibli 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Diorama+Ghibli+1'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_01_07(2).png" alt="Diorama Ghibli 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Diorama+Ghibli+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_01_07.png" alt="Totoro 3D" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Totoro+Model'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_02_07.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_06_07.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_07_07.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_08_07.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_24_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_25_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_29_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_30_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_04_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_08_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_09_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_10_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_15_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_16_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_16_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_18_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_22_06(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_22_06(3).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_24_06.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_01_05(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_01_05(3).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_05_05.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_06_05.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_11_05_(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(3).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(4).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(5).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_14_05.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_18_05(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_18_05.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_27_04(2).png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                            <img src="./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_28_04.png" alt="Ponyo" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Ponyo+Bucket'">
+                        </div>
+                        <button onclick="prevSlide(event, 'carousel-track-diorama', 35)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(event, 'carousel-track-diorama', 35)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <div class="absolute top-4 right-4 flex space-x-1.5 z-10">
+                            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 backdrop-blur-md">Modelado 3D</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Dioramas Temáticos Modulares</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Proyecto centrado en el modelado 3D de dioramas temáticos y personajes estilizados orientados a impresión 3D.</p>
+                        <button onclick='openModal("Dioramas Temáticos Modulares", "Proyecto de prácticas extracurriculares centrado en el modelado 3D de dioramas temáticos y personajes estilizados.", [
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualixación_29_06.png", 
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_01_07(2).png", 
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_01_07.png", 
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_02_07.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_06_07.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_07_07.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_08_07.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_24_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_25_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_29_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Pokemon/Actualización_30_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_04_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_08_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_09_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_10_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_15_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_16_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_16_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_18_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_22_06(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_22_06(3).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_Sanrio/Actualización_24_06.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_01_05(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_01_05(3).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_05_05.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_06_05.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_11_05_(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(3).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(4).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_13_05(5).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_14_05.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_18_05(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_18_05.png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_27_04(2).png",
+                            "./Prácticas_Externas/Proyecto_Dioramas/Diorama_StudioGibli/Actualización_28_04.png"
+                        ])' class="w-full py-2.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-expand"></i>
+                            <span>Ampliar Proyecto</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Stand Comercial 3D -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden group hover:border-indigo-500/40 transition-all duration-300" data-category="3d">
+                    <div class="h-64 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+                        <div id="carousel-track-stand" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_2_Actualizado.png" alt="Stand Render 1" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+1'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_3_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_4_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_2_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_3_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <img src="./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_Actualizado.png" alt="Stand Render 2" class="w-full h-full object-cover flex-shrink-0" onerror="this.src='https://placehold.co/600x400/131c2e/6366f1?text=Stand+3D+2'">
+                            <div class="w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative">
+                                <video src="./Prácticas_Externas/Proyecto_Stand/Video_Stand.mp4" controls class="w-full h-full object-contain"></video>
+                            </div>
+                        </div>
+                        <button onclick="prevSlide(event, 'carousel-track-stand', 8)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(event, 'carousel-track-stand', 8)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors z-10">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 backdrop-blur-md z-10">Modelado 3D</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Stand Comercial 3D y Render</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">Creación de un renderizado 3D realista de un stand comercial a escala real con materiales y texturas avanzadas.</p>
+                        <button onclick='openModal("Stand Comercial 3D y Render", "Creación de un renderizado 3D realista de un stand comercial a escala real, modelando mobiliario y estructura.", [
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_2_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_3_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_4_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_ConObjetos_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_2_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_3_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Render_Stand_SinObjetos_Actualizado.png",
+                            "./Prácticas_Externas/Proyecto_Stand/Video_Stand.mp4"
+                        ])' class="w-full py-2.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-300 text-sm font-semibold transition-colors flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-expand"></i>
+                            <span>Ampliar Proyecto</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Herramientas y Especialidades</h2>
+                <p class="text-slate-400">Software profesional utilizado en cada desarrollo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-cube text-3xl text-indigo-400 mb-3"></i>
+                    <h4 class="font-bold text-slate-200">Blender</h4>
+                    <p class="text-xs text-slate-400 mt-1">Modelado 3D y Esculpido</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-shapes text-3xl text-purple-400 mb-3"></i>
+                    <h4 class="font-bold text-slate-200">3ds Max</h4>
+                    <p class="text-xs text-slate-400 mt-1">Diseño y Arquitectura 3D</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-gamepad text-3xl text-pink-400 mb-3"></i>
+                    <h4 class="font-bold text-slate-200">Unity</h4>
+                    <p class="text-xs text-slate-400 mt-1">Desarrollo de Videojuegos</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-print text-3xl text-emerald-400 mb-3"></i>
+                    <h4 class="font-bold text-slate-200">Bambu Studio</h4>
+                    <p class="text-xs text-slate-400 mt-1">Impresión y Preparación 3D</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-slate-950/80 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">Contacto</h2>
+            <p class="text-slate-400 mb-8">Disponible para colaboraciones, encargos de modelado 3D o desarrollo de videojuegos.</p>
+            <div class="inline-flex items-center space-x-3 px-6 py-4 rounded-2xl bg-slate-900/90 border border-indigo-500/30 shadow-xl shadow-indigo-500/10">
+                <i class="fa-solid fa-envelope text-indigo-400 text-xl"></i>
+                <a href="mailto:larasansanz@gmail.com" class="text-xl md:text-2xl font-bold tracking-wide bg-gradient-to-r from-indigo-300 via-white to-purple-300 bg-clip-text text-transparent hover:underline">
+                    larasansanz@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Media (Image / Video) with Carousel -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-card max-w-4xl w-full rounded-2xl overflow-hidden relative border border-slate-700">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-900/80 text-white flex items-center justify-center hover:bg-slate-800 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="max-h-[60vh] bg-slate-950 flex items-center justify-center relative overflow-hidden">
+                <div id="modal-carousel-track" class="w-full h-[60vh] flex transition-transform duration-500 ease-in-out">
+                    <!-- Dynamic modal images injected via JS -->
+                </div>
+                <!-- Modal Carousel Controls -->
+                <button onclick="prevModalSlide(event)" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-black/90 transition-colors z-10">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="nextModalSlide(event)" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-black/90 transition-colors z-10">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <h3 id="modalTitle" class="text-xl font-bold text-white mb-2"></h3>
+                <p id="modalDesc" class="text-slate-300 text-sm mb-4"></p>
+                <div id="modalLinkContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track slide indices for each card
+        const slideIndices = {};
+
+        function nextSlide(event, trackId, totalSlides) {
+            event.stopPropagation();
+            if (!slideIndices[trackId]) slideIndices[trackId] = 0;
+            slideIndices[trackId] = (slideIndices[trackId] + 1) % totalSlides;
+            updateCarousel(trackId);
+        }
+
+        function prevSlide(event, trackId, totalSlides) {
+            event.stopPropagation();
+            if (!slideIndices[trackId]) slideIndices[trackId] = 0;
+            slideIndices[trackId] = (slideIndices[trackId] - 1 + totalSlides) % totalSlides;
+            updateCarousel(trackId);
+        }
+
+        function updateCarousel(trackId) {
+            const track = document.getElementById(trackId);
+            if (track) {
+                const index = slideIndices[trackId] || 0;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white');
+                btn.classList.add('bg-slate-900', 'text-slate-400');
+            });
+            event.target.classList.remove('bg-slate-900', 'text-slate-400');
+            event.target.classList.add('bg-indigo-600', 'text-white');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Controls
+        let modalImages = [];
+        let modalCurrentIndex = 0;
+
+        function openModal(title, desc, items, externalLink = null, isRockAndMole = false) {
+            const modal = document.getElementById('imageModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalTrack = document.getElementById('modal-carousel-track');
+            const modalLinkContainer = document.getElementById('modalLinkContainer');
+
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            modalImages = items;
+            modalCurrentIndex = 0;
+
+            modalTrack.innerHTML = '';
+            items.forEach((item, idx) => {
+                const isVideo = (isRockAndMole && idx >= 4) || item.includes('Video_Stand.mp4'); // Los últimos 3 son videos en Rock and Mole
+                if (isVideo) {
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'w-full h-full flex-shrink-0 bg-black flex items-center justify-center relative';
+
+                    const video = document.createElement('video');
+                    video.src = item;
+                    video.controls = true;
+                    video.className = 'w-full h-full object-contain';
+
+                    videoContainer.appendChild(video);
+                    modalTrack.appendChild(videoContainer);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = item;
+                    img.onerror = function() {
+                        this.src = 'https://placehold.co/800x500/131c2e/6366f1?text=Preview+No+Disponible';
+                    };
+                    img.className = 'w-full h-full object-contain flex-shrink-0 bg-slate-950';
+                    modalTrack.appendChild(img);
+                }
+            });
+
+            // Add external link button if provided
+            modalLinkContainer.innerHTML = '';
+            if (externalLink) {
+                const linkBtn = document.createElement('a');
+                linkBtn.href = externalLink;
+                linkBtn.target = '_blank';
+                linkBtn.className = 'inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white text-sm font-semibold transition-all shadow-lg shadow-pink-500/20';
+                linkBtn.innerHTML = '<i class="fa-solid fa-gamepad"></i><span>Jugar en Itch.io</span>';
+                modalLinkContainer.appendChild(linkBtn);
+            }
+
+            updateModalCarousel();
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        function nextModalSlide(event) {
+            event.stopPropagation();
+            if (modalImages.length === 0) return;
+            modalCurrentIndex = (modalCurrentIndex + 1) % modalImages.length;
+            updateModalCarousel();
+        }
+
+        function prevModalSlide(event) {
+            event.stopPropagation();
+            if (modalImages.length === 0) return;
+            modalCurrentIndex = (modalCurrentIndex - 1 + modalImages.length) % modalImages.length;
+            updateModalCarousel();
+        }
+
+        function updateModalCarousel() {
+            const track = document.getElementById('modal-carousel-track');
+            if (track) {
+                track.style.transform = `translateX(-${modalCurrentIndex * 100}%)`;
+            }
+        }
+
+        // Close modal on background click
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
